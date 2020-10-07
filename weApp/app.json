@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/optimization/optimization",
+    "pages/user/user",
+    "pages/cart/cart",
+    "pages/pay/pay",
+    "pages/paySuccess/paysuccess"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#f06a0a",
+    "color": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "扫码购物",
+        "iconPath": "./image/tabbar/index02.png",
+        "selectedIconPath": "./image/tabbar/index01.png"
+      },
+      {
+        "pagePath": "pages/optimization/optimization",
+        "text": "每日优选",
+        "iconPath": "./image/tabbar/product02.png",
+        "selectedIconPath": "./image/tabbar/product01.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "./image/tabbar/user02.png",
+        "selectedIconPath": "./image/tabbar/user01.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

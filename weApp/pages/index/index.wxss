@@ -1,0 +1,47 @@
+/* pages/scanQcode/EWM.wxss */
+.index{
+  width: 100%;
+  color: #000;
+}
+swiper{
+  height: 450rpx;
+}
+swiper swiper-item image{
+  height: 450rpx;
+  width: 100%;
+}
+
+.sweepCode{
+  position: relative;
+  margin:60rpx auto;
+  background: #f5ba47;
+  border: 20rpx  solid #FFE8B6;
+  border-radius: 50%;
+  width: 300rpx;
+  height: 300rpx;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sweepCode .CartNum{
+  position: absolute;
+  top: 60rpx;
+  right: 60rpx;
+  background: #FF2124;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+.sweepCode text{
+  font-size: 28rpx;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+.sweepCode image{
+  width: 50%;
+}

@@ -1,0 +1,26 @@
+<view class="index">
+  <!-- 轮播图 -->
+  <swiper autoplay circular interval="3000" indicator-dots indicator-color="#fff" incicator-active-color="#e5e5e5">
+    <swiper-item>
+      <image mode="widthFix" src="../../image/swiper/01.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="../../image/swiper/02.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="../../image/swiper/03.jpg"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 去结算 -->
+  <navigator url="/pages/cart/cart" wx:if="{{cart.length!=0}}" class="sweepCode">
+    <image mode="widthFix" src="../../image/index/cart_index.png"></image>
+    <text>去结算</text>
+    <view class="CartNum">{{cart.length}}</view>
+  </navigator>
+  <!-- 扫码 -->
+  <view wx:else bindtap="scanCode" class="sweepCode">
+    <image mode="widthFix" src="../../image/index/qrcode.png"></image>
+    <text>请扫描商品条形码</text>
+  </view>
+</view>

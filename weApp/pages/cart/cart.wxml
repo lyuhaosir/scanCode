@@ -1,0 +1,31 @@
+<view class="cart">
+  <!-- 如果没有商品去添加商品 -->
+  <view class="goods_none" wx:if="{{goodsList.length==0}}">
+    <text class="none_name">购物车是空的哦~</text>
+    <image mode="widthFix" src="../../image/index/cart.png"></image>
+    <button bindtap="cartAdd">扫一扫条形码</button>
+  </view>
+  <!-- 商品内容 -->
+  <view class="goods_content" wx:else>
+    <view class="goods_item" wx:for="{{goodsList}}" wx:key="index">
+      <text class="item_title">{{item.title}}</text>
+      <text class="item_description" wx:if="{{item.description}}">{{item.description}}</text>
+      <text class="item_price">￥{{item.price}}</text>
+      <view class="Num">
+        <button class="minus" bindtap="itemNum" data-id="{{item._id}}" data-num="{{-1}}">-</button>
+        <input type="text" disabled value="{{item.num}}" />
+        <button class="add" bindtap="itemNum" data-id="{{item._id}}" data-num="{{1}}">+</button>
+      </view>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="foot">
+    <view class="goods_price">
+      总计：<text>￥{{AllPrice}}</text>
+    </view>
+    <view class="goods_intend">
+      <view class="add" bindtap="cartAdd">继续添加</view>
+      <navigator url="/pages/pay/pay" class="pay">去结算({{AllNum}})</navigator>
+    </view>
+  </view>
+</view>
